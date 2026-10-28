@@ -1,0 +1,39 @@
+# Private agent configuration, commands, and internal delivery notes
+.claude/**
+CLAUDE.md
+.claudeignore
+
+# Personal knowledge-base material; retain only public navigation skeletons
+brain/**
+!brain/README.md
+!brain/index.md
+!brain/workspace/
+!brain/workspace/_README.md
+
+# Personal vault records, photos, offer snapshots, and generated attachments
+vault/raw/**
+vault/prodotti/**
+vault/confronti/**
+vault/log.md
+vault/spazi.json
+vault/barattoli-bormioli.json
+vault/catalogo-attributi.json
+vault/catalogo-classi.json
+
+# Internal research captures and obsolete local artefacts
+.firecrawl/**
+old/**
+forge.status.json
+
+# Private deployment topology and instance-specific compose configuration
+deploy/docker-compose.yml
+deploy/docker-compose.db.yml
+deploy/docker-compose.override.yml
+deploy/docker-compose.prod.yml
+deploy/Caddyfile
+deploy/compose.sh
+
+# Instance-specific generated metadata
+node.config
+overview.manifest.json
+suite.lock.json

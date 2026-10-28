@@ -1,0 +1,73 @@
+# Casa — Prodotti vault
+
+# Allegati Telegram scaricati dal Coordinator (le foto buone vanno in vault/raw/)
+.claude/inbox/telegram/*
+!.claude/inbox/telegram/.gitkeep
+
+# App confronti (backend + frontend)
+__pycache__/
+*.pyc
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+# Vendor di @suite/backend-core generato da deploy/prebuild.sh (artefatto di build)
+frontend/vite.config.d.ts
+frontend/vite.config.js
+.firecrawl/
+
+# Obsidian local state
+vault/.obsidian/
+
+# Log e snapshot lasciati nella root dal browser MCP (Playwright)
+.playwright-mcp/
+
+# NB: il brain è VERSIONATO. Solo brain/private/ è escluso (regola nel blocco
+# suite-managed sotto): è conoscenza durevole del nodo, deve sopravvivere a un
+# clone nuovo e viaggiare con il repo, non vivere solo su un disco.
+
+# Environment
+*.env
+# >>> suite-managed >>>
+node.config.resolved.json
+.claude/agents/*-api-reviewer.md
+.ai/agents/*-api-reviewer.md
+.claude/agents/*-backend-impl.md
+.ai/agents/*-backend-impl.md
+.claude/agents/*-bot-handler.md
+.ai/agents/*-bot-handler.md
+.claude/agents/*-cli-dev.md
+.ai/agents/*-cli-dev.md
+.claude/agents/*-db-migrator.md
+.ai/agents/*-db-migrator.md
+.claude/agents/*-integration-dev.md
+.ai/agents/*-integration-dev.md
+.claude/agents/*-node-persona.md
+.ai/agents/*-node-persona.md
+.claude/agents/*-react-component.md
+.ai/agents/*-react-component.md
+.claude/agents/*-ui-reviewer.md
+.ai/agents/*-ui-reviewer.md
+.mcp.json
+opencode.json
+.superpowers/
+.brain-inbox/
+brain/private/
+**/brain/private/
+.obsidian/
+.venv/
+.env
+.env.production
+frontend/vendor/*
+backend/vendor/*
+*.stackdump
+# <<< suite-managed <<<
+.claude/worktrees/
+.remember/logs/
+.claude/inbox/
+.HA_VERSION
+
+# Snapshot locale degli arredi letti dall API del nodo Home (derivato, non fonte)
+vault/_cache/
+
+# per-device: sovrascritto da apply-tools-policy.py, mai identico tra i checkout
+.claude/settings.json

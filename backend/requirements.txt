@@ -1,0 +1,15 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.0
+httpx>=0.27
+Pillow>=10.0
+# DB (additive — the node owns its own Postgres; see home_product_finder_backend/db.py)
+SQLAlchemy>=2.0
+alembic>=1.13
+asyncpg>=0.29
+
+# Shared Life package suite_backend_core (Base, make_engine, make_session_factory,
+# used by home_product_finder_backend/db.py) is NOT listed here: a path in this
+# file is device-specific and breaks the Docker build elsewhere (issue #2).
+#   - Docker: deploy/prebuild.sh vendors it, backend.Dockerfile installs it.
+#   - Host venv: `nodes link` (or menu.ps1) installs ../Life/packages/backend-core editable.

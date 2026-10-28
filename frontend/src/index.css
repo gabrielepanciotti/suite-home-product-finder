@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import "@suite/design-system/theme.css";
+@import "./suite-theme.css";
+@source "../node_modules/@suite/design-system/dist/**/*.{js,cjs}";
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+@media (max-width: 640px) {
+  button,
+  input,
+  select,
+  textarea,
+  [role="button"],
+  [role="combobox"] {
+    min-height: 44px;
+  }
+}
